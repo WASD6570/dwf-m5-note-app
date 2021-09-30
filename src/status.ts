@@ -1,15 +1,13 @@
 const status = {
   data: {
-    tasks: [
-      { id: 1, title: "primer item", completed: true, deleted: false },
-      { id: 2, title: "segundo item", completed: false, deleted: false },
-      { id: 3, title: "tercer item", completed: false, deleted: true },
-    ],
+    tasks: [{ id: 1, title: "mock task", completed: true, deleted: true }],
   },
   listeners: [],
   init() {
     const localData = localStorage.getItem("saved-status");
-    status.setStatus(JSON.parse(localData));
+    if (localData["saved-status"] == null) {
+      localStorage.setItem("saved-status", JSON.stringify(this.data));
+    } else return status.setStatus(JSON.parse(localData));
   },
   getStatus() {
     return this.data;
