@@ -151,8 +151,6 @@ export function initHomePage(containerEl: Element) {
     createTask(status.getStatus().tasks);
   });
 
-  createTask(status.getStatus().tasks);
-
   function createTask(tasks) {
     listContainer.innerHTML = "";
     for (const t of tasks) {
