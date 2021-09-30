@@ -1,0 +1,18 @@
+{
+  "name": "web-storage",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.0.0-rc.0"
+  }
+}
