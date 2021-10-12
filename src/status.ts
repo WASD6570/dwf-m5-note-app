@@ -5,7 +5,7 @@ const status = {
   listeners: [],
   init() {
     const localData = localStorage.getItem("saved-status");
-    if (localData["saved-status"] == null) {
+    if (localData == null) {
       localStorage.setItem("saved-status", JSON.stringify(this.data));
     } else return status.setStatus(JSON.parse(localData));
   },
